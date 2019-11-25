@@ -1,0 +1,6 @@
+<!--pages/agreement/agreement.wxml 加载网页操作-->
+
+<view class="container">
+    豆瓣使用协议
+</view>
+  
