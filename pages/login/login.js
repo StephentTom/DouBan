@@ -12,7 +12,7 @@ Page({
    * 微信登录事件 ES5
    */
   wxLoginAction: function() {
-
+    
   },
   /**
    * 豆瓣登录事件 ES5

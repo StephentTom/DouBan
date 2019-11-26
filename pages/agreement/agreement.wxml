@@ -1,6 +1,4 @@
 <!--pages/agreement/agreement.wxml 加载网页操作-->
 
-<view class="container">
-    豆瓣使用协议
-</view>
+<web-view src="https://www.baidu.com" bindmessage=""></web-view>
   
