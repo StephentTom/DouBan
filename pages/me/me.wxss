@@ -1,1 +1,114 @@
 /* pages/me.wxss */
+
+.me-login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 470rpx;
+    position: relative;
+}
+.me-login-wrapper image {
+    width: 100%;
+    height: 100%;
+    /* 绝对布局 脱离flex布局 则相对于整个屏幕page来说, 而不是父元素; 如果要相对于父元素, 则需要子绝父相 */
+    position: absolute;
+    z-index: -1;
+}
+.me-login-wrapper .me-login {
+    width: 350rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #1e4826;
+    font-size: 50rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    background-color: #fff;
+}
+
+
+.me-list-wrapper {
+
+}
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+}
+.title-wrapper .left-title {
+    font-size: 35rpx;
+}
+.title-wrapper .check-wrapper {
+    color: #9d9d9d;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+}
+
+.item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40rpx;
+    padding-right: 30rpx;
+}
+
+.item-wrapper .icon {
+    width: 54rpx;
+    height: 54rpx;
+}
+.item-wrapper .item-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* 当设置一个值时 === flex: 1 */
+    margin-left: 25rpx;
+}
+.item-info-wrapper .item-subinfo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #4d4d4d;
+    font-size: 28rpx;
+    padding: 10rpx 0 25rpx;
+}
+.item-subinfo-wrapper .item-subtitle-wrapper .item-count-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #818181;
+    margin-top: 10rpx;
+}
+.item-count-wrapper .count {
+    font-size: 48rpx;
+    margin-right: 8rpx;
+}
+.item-count-wrapper .text {
+    margin-bottom: 12rpx;
+}
+.item-subinfo-wrapper .item-flag-wrapper {
+    color: #C6C6C6;
+    margin-left: 45rpx;
+}
+.item-subinfo-wrapper .item-tostart-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 10rpx;
+}
+.item-tostart-wrapper .start {
+    color: #4d4d4d;
+    background-color: #F5F5F5;
+    border-radius: 10rpx;
+    padding: 10rpx 10rpx;
+}
+
+.version {
+    width: 100%;
+    color: #c9c9c9;
+    position: absolute;
+    bottom: 30rpx;
+    font-size: 25rpx;
+    text-align: center;
+}
