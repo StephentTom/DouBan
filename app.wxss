@@ -1,5 +1,11 @@
 /**app.wxss**/
 
+/* 全局设置字体 */
+page {
+    height: 100%;
+    font-size: 26rpx;
+}
+
 /* 箭头 */
 .arrow {
     width: 20rpx;

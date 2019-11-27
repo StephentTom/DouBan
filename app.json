@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/me/me",
     "pages/home/home",
     "pages/rank/rank",
+    "pages/me/me",
     "pages/agreement/agreement",
     "pages/login/login"
   ],
@@ -10,34 +10,34 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "豆瓣评分",
-    "navigationBarTextStyle": "black",
-    "tabBar": {
-      "color": "",
-      "selectedColor": "#42BD55",
-      "backgroundColor": "#ffffff",
-      "position": "bottom",
-      "borderStyle": "black",
-      "list": [
-        {
-          "pagePath": "/pages/home/home",
-          "text": "我的",
-          "iconPath": "/assets/images/tabs/tab_home_normal.png",
-          "selectedIconPath": "/assets/images/tabs/tab_home_active.png"
-        },
-        {
-          "pagePath": "/pages/rank/rank",
-          "text": "我的",
-          "iconPath": "/assets/images/tabs/tab_home_normal.png",
-          "selectedIconPath": "/assets/images/tabs/tab_home_active.png"
-        },
-        {
-          "pagePath": "/pages/me/me",
-          "text": "我的",
-          "iconPath": "/assets/images/tabs/tab_home_normal.png",
-          "selectedIconPath": "/assets/images/tabs/tab_home_active.png"
-        }
-      ]
-    }  
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#d0d0d0",
+    "selectedColor": "#42BD55",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/images/tabs/tab_home_normal.png",
+        "selectedIconPath": "/assets/images/tabs/tab_home_active.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "/assets/images/tabs/tab_subject_normal.png",
+        "selectedIconPath": "/assets/images/tabs/tab_subject_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/assets/images/tabs/tab_profile_normal.png",
+        "selectedIconPath": "/assets/images/tabs/tab_profile_active.png"
+      }
+    ] 
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

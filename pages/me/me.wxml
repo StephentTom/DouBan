@@ -1,44 +1,46 @@
 <!--pages/me.wxml-->
 
 <view class="container">
-    <view class="me-login-wrapper">
-        <image src="/assets/images/me/me_bg.png"></image>
-        <view class="me-login" bind:tap="loginAction">登录</view>
-    </view>
+    <view>
+        <view class="me-login-wrapper">
+            <image src="/assets/images/me/me_bg.png"></image>
+            <view class="me-login" bind:tap="loginAction">登录</view>
+        </view>
+        <view class="me-list-wrapper">
+            <view class="title-wrapper">
+                <view class="left-title">我的书影音</view>
+                <view class="check-wrapper">
+                    登录查看
+                    <view class="arrow"/>
+                </view>
+            </view>
 
-    <view class="me-list-wrapper">
-        <view class="title-wrapper">
-            <view class="left-title">我的书影音</view>
-            <view class="check-wrapper">
-                登录查看
-                <view class="arrow"/>
+            <view class="item-wrapper" wx:for="{{myBookVideoes}}" wx:key="{{item.id}}" bind:tap="startAction" data-model="{{item}}">
+                <image class="icon" src="{{item.imageSrc}}"/>
+                <view class="item-info-wrapper">
+                    <view class="item-subinfo-wrapper">
+                        <view class="item-subtitle-wrapper">
+                            {{item.subtitle}}
+                            <view class="item-count-wrapper">
+                                <view class="count">{{item.readCount}}</view>
+                                <view class="text">{{item.id == 0? "看过" : (item.id == 1? "读过" : "听过")}}</view>
+                            </view>
+                        </view>
+                        <view class="item-flag-wrapper">
+                            <text>{{item.flagDesc}}</text>
+                        </view>
+                        <view class="item-tostart-wrapper">
+                            <view class="start">立即开启</view>
+                            <view class="arrow"/>
+                        </view>
+                    </view> 
+                    <!-- {{true}} 就会显示此view-->
+                    <view class="divLine" wx:if="{{index != myBookVideoes.length-1}}"/>
+                </view>
             </view>
         </view>
-
-        <view class="item-wrapper">
-            <image class="icon" src="/assets/images/me/me_movie.png"/>
-            <view class="item-info-wrapper">
-                <view class="item-subinfo-wrapper">
-                    <view class="item-subtitle-wrapper">
-                        观影分析
-                        <view class="item-count-wrapper">
-                            <view class="count">0</view>
-                            <view class="text">看过</view>
-                        </view>
-                    </view>
-                    <view class="item-flag-wrapper">
-                        <text>标记10部影片\n开启观影分析</text>
-                    </view>
-                    <view class="item-tostart-wrapper">
-                        <view class="start">立即开启</view>
-                        <view class="arrow"/>
-                    </view>
-                </view> 
-                <view class="divLine"/>
-            </view>
-        </view> 
     </view>
-      
-    <view class="version">版本1.0.39</view>
+
+    <view class="version">版本1.0.42</view>
 </view>
   

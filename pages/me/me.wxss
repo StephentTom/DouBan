@@ -1,5 +1,12 @@
 /* pages/me.wxss */
 
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .me-login-wrapper {
     display: flex;
     flex-direction: column;
@@ -24,6 +31,8 @@
     text-align: center;
     border-radius: 50rpx;
     background-color: #fff;
+    /* 阴影 */
+    box-shadow: 2rpx 2rpx 10rpx rgb(0, 0, 0);
 }
 
 
@@ -54,6 +63,14 @@
     justify-content: space-between;
     padding-left: 40rpx;
     padding-right: 30rpx;
+}
+/* 去除最后一个item的下划线 */
+.item-wrapper:last-of-type .item-info-wrapper .divLine {
+    /* 虽然隐藏, 但还是会渲染上去 */
+    /* visibility: hidden; */
+
+    /* 不会被渲染 */
+    /* display: none; */
 }
 
 .item-wrapper .icon {
@@ -86,6 +103,7 @@
     margin-right: 8rpx;
 }
 .item-count-wrapper .text {
+    font-size: 25rpx;
     margin-bottom: 12rpx;
 }
 .item-subinfo-wrapper .item-flag-wrapper {
@@ -105,10 +123,8 @@
 }
 
 .version {
-    width: 100%;
     color: #c9c9c9;
-    position: absolute;
-    bottom: 30rpx;
     font-size: 25rpx;
     text-align: center;
+    margin-bottom: 30rpx;
 }
