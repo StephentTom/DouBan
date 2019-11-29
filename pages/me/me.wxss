@@ -70,7 +70,7 @@
     /* visibility: hidden; */
 
     /* 不会被渲染 */
-    /* display: none; */
+    display: none;
 }
 
 .item-wrapper .icon {

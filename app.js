@@ -1,11 +1,15 @@
 //app.js
 App({
   onLaunch: function () {
+
+
+
+
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
@@ -33,7 +37,16 @@ App({
       }
     })
   },
+
+  // 全局变量
   globalData: {
+    bdAK: "1lY3kMKXRWM2Vlf10c55BStCSKXDDr76",
+    city: '福州市',
     userInfo: null
+  },
+
+  // 域名
+  setURL: (url)=> {
+    return `https://douban-api.uieee.com/${url}`
   }
 })

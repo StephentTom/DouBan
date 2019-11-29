@@ -1,1 +1,99 @@
 /* pages/home/home.wxss */
+
+.container {
+
+}
+
+.searchBox {
+    background-color: #42BD55;
+    padding: 20rpx;
+}
+.searchBox .input-box {
+    height: 70rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8rpx;
+}
+.input-box image {
+    width: 36rpx;
+    height: 36rpx;
+}
+.input-box text {
+    color: #c6c6c6;
+    margin-left: 8rpx;
+}
+
+.row-wrapper {
+    
+}
+.row-wrapper .section-wrapper {
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+}
+.section-wrapper .title {
+    color: #494949;
+    font-size: 35rpx;
+}
+.section-wrapper .more {
+    color: #42BD55;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.row-wrapper .scroll-wrapper {
+    width: 100%;
+    white-space: nowrap; /* 不进行换行 */
+    box-sizing: border-box;
+}
+.scroll-wrapper .item {
+    width: 160rpx;
+    /* display: inline-block; 行内块元素*/
+    display: inline-flex; /*行内元素并设置flex布局*/
+    flex-direction: column;
+    margin-left: 30rpx;
+}
+.scroll-wrapper .item:last-of-type { /* .item:last- :之间不能有空格*/
+    margin-right: 30rpx;
+}
+.item image {
+    width: 100%;
+    height: 223rpx;
+    border-radius: 10rpx;
+}
+.item .name {
+    width: 100%;
+    margin-top: 10rpx;
+    font-size: 28rpx;
+    /*结合: 可以把文本溢出部分隐藏并显示省略号*/
+    overflow: hidden; /*溢出隐藏*/
+    text-overflow: ellipsis;  /*超出显示为省略号*/
+    
+}
+.item .stars-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 25rpx;
+    color: #C6C6C6;
+}
+.stars-wrapper .starIcons {
+    display: flex;
+    margin-right: 8rpx;
+}
+.starIcons image {
+    display: flex;
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.arrow {
+    width: 13rpx;
+    height: 13rpx;
+    border-top-color: #42BD55;
+    border-right-color: #42BD55;
+}
