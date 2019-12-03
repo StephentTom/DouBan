@@ -1,0 +1,13 @@
+
+/* flex布局 默认主轴为row(不会进行自动换行) */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* 换行 */
+}
+
+.container movieItem {
+    width: 33.33%;
+    text-align: center;
+    margin-bottom: 30rpx;
+    /*margin: 0 10rpx 30rpx;  上 左右 下*/
+}

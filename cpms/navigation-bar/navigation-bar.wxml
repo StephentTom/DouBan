@@ -1,0 +1,11 @@
+
+<view class="container">
+    <view class="status-bar" style="{{statusBarStyle}}"/>
+    <view class="nav-bar" style="{{navBarStyle}}">
+        <view class="left-item">
+            <image class="back icon" src="/assets/images/others/other_nav_back.png"/>
+            <image class="home icon" src="/assets/images/others/other_nav_home.png"/>
+        </view>
+        <view class="nav-title">{{}}</view>
+    </view>
+</view>

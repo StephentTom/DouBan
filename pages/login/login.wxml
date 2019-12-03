@@ -1,4 +1,13 @@
-<!--pages/login.wxml-->
+
+
+<navigation-bar 
+    navTitle="登录"
+    navTitleColor="black"
+    navBarColor="#42BD55"
+    statusBarColor="#42BD55"
+    isHiddenBack="false"
+    isHiddenHome="false"
+/>
 
 <view class="container">
     <image class="logo" src="/assets/images/others/other_launcher.png" mode="aspectFit|aspectFill|widthFix"/>

@@ -1,0 +1,37 @@
+
+.item {
+    width: 160rpx;
+    /* display: inline-block; 行内块元素*/
+    display: inline-flex; /*行内元素并设置flex布局*/
+    flex-direction: column;
+}
+.item .cover {
+    width: 100%;
+    height: 223rpx;
+    border-radius: 10rpx;
+    border: 2rpx solid #eeeeee;
+}
+.item .name {
+    width: 100%;
+    margin-top: 10rpx;
+    font-size: 28rpx;
+    /*结合: 可以把文本溢出部分隐藏并显示省略号*/
+    overflow: hidden; /*溢出隐藏*/
+    text-overflow: ellipsis;  /*超出显示为省略号*/
+    white-space: nowrap; /*不允许换行*/
+}
+.item .stars-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 25rpx;
+    color: #C6C6C6;
+}
+.stars-wrapper .starIcons {
+    display: flex;
+    margin-right: 8rpx;
+}
+.starIcons image {
+    display: flex;
+    width: 25rpx;
+    height: 25rpx;
+}

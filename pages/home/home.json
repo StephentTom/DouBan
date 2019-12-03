@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "首页"
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#42BD55",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "movieItem": "/cpms/movieItem/movieItem"
+  }
 }

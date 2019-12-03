@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "登录"
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navigation-bar": "/cpms/navigation-bar/navigation-bar"
+  }
 }

@@ -1,5 +1,4 @@
 
-
 <view class="container">
     <view class="searchBox">
         <view class="input-box">
@@ -9,40 +8,18 @@
     </view>
 
     <view class="main-wrraper">
-        <view class="row-wrapper">
+        <view class="row-wrapper" wx:for="{{allMovies}}" wx:key="unique">
             <view class="section-wrapper">
-                <view class="title">影院热映</view>
-                <view class="more">
+                <view class="title">{{item.title}}</view>
+                <view class="more" bind:tap="moreAction" data-sectionModel="{{item}}">
                     查看更多
                     <view class="arrow"/>
                 </view>
             </view>
 
             <scroll-view class="scroll-wrapper" scroll-x>
-                <block wx:for="{{movies}}" wx:for-item="movie" wx:key="unique">
-                    <view class="item">
-                        <image src="{{movie.images.large}}"/>
-                        <view class="name">{{movie.title}}</view>
-                        <view class="stars-wrapper">
-                            <block wx:if="{{movie.starStatus}}">
-                                <view class="starIcons">
-                                <!-- 实现方式一: 如果js中转为[1, 1, 1, 0.5, 0] -->
-                                <!-- <block wx:for="{{starIcons}}" wx:for-item="starIcon" wx:key="unique">
-                                    <image wx:if="{{1}}" src="/assets/images/others/other_star_small_on.png"/>
-                                    <image wx:elif="{{0.5}}" src="/assets/images/others/other_star_small_half.png"/>  
-                                    <image wx:else src="/assets/images/others/other_star_small_off.png"/>
-                                </block> -->
-
-                                <!-- 实现方式二: -->
-                                <image wx:for="{{movie.starStatus.on}}" wx:key="unique" src="/assets/images/others/other_star_small_on.png"/>
-                                <image wx:if="{{movie.starStatus.half}}" src="/assets/images/others/other_star_small_half.png"/>  
-                                <image wx:for="{{movie.starStatus.off}}" wx:key="unique" src="/assets/images/others/other_star_small_off.png"/>
-                                </view>
-                                {{movie.rating.average}}
-                            </block>
-                            <block wx:else>暂无评论</block>
-                        </view>
-                    </view>
+                <block wx:for="{{item.movies}}" wx:for-item="movie" wx:key="unique">
+                    <movieItem movie="{{movie}}" bind:tapItem="movieAction" data-movie="{{movie}}"/>
                 </block>
             </scroll-view>
         </view>
@@ -50,3 +27,27 @@
 </view>
   
 
+
+<!-- <view class="item">
+    <image src="{{movie.images.large}}"/>
+    <view class="name">{{movie.title}}</view>
+    <view class="stars-wrapper">
+        <block wx:if="{{movie.starStatus}}">
+            <view class="starIcons">
+            <!-- 实现方式一: 如果js中转为[1, 1, 1, 0.5, 0] -->
+            <!-- <block wx:for="{{starIcons}}" wx:for-item="starIcon" wx:key="unique">
+                <image wx:if="{{1}}" src="/assets/images/others/other_star_small_on.png"/>
+                <image wx:elif="{{0.5}}" src="/assets/images/others/other_star_small_half.png"/>  
+                <image wx:else src="/assets/images/others/other_star_small_off.png"/>
+            </block> -->
+
+            <!-- 实现方式二: -->
+            <!-- <image wx:for="{{movie.starStatus.on}}" wx:key="unique" src="/assets/images/others/other_star_small_on.png"/>
+            <image wx:if="{{movie.starStatus.half}}" src="/assets/images/others/other_star_small_half.png"/>  
+            <image wx:for="{{movie.starStatus.off}}" wx:key="unique" src="/assets/images/others/other_star_small_off.png"/>
+            </view>
+            {{movie.rating.average}}
+        </block>
+        <block wx:else>暂无评论</block>
+    </view> -->
+<!-- </view> --> 
