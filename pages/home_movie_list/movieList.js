@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movies: []
+    // 自定义导航栏, 解决内容被导航栏遮住
+    topMargin: wx.sysInfo.navBarHeight + wx.sysInfo.statusBarHeight,
+    
+    movies: [],
+    title: ''
   },
 
   /**
@@ -16,15 +20,17 @@ Page({
     // const obj = JSON.parse(options.sectionModel)
 
     // 设置当前页面导航栏title
-    wx.setNavigationBarTitle({
-      title: options.title
-    });
+    // wx.setNavigationBarTitle({
+    //   title: options.title
+    // });
+
     // 获取缓存, 并设置更新UI
     wx.getStorage({
       key: options.url,
       success: (result) => {
         this.setData({
-          movies: result.data
+          movies: result.data,
+          title: options.title
         })
       }
     });

@@ -1,0 +1,10 @@
+<!--cpms/slot/m-tag.wxml-->
+
+
+<view class="container">
+    <slot name="before">
+        <slot name="after"></slot>
+    </slot>
+
+    <view>{{title}}</view>
+</view>

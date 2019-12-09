@@ -1,7 +1,19 @@
 
-<view class="container">
-    <block wx:for="{{movies}}" wx:key="unique" wx:for-item="movie">
-        <movieItem movie="{{movie}}" bind:tapItem="movieAction" data-movie="{{movie}}"/>
-    </block>
+
+
+<view class="page-container" style="padding-top: {{topMargin}}px;">
+    <navigation-bar 
+        navTitle="{{title}}" 
+        isHiddenBack="false" 
+        isHiddenHome="false"
+    />
+
+    <view class="container">
+        <block wx:for="{{movies}}" wx:key="unique" wx:for-item="movie">
+            <movieItem movie="{{movie}}" bind:tapItem="movieAction" data-movie="{{movie}}"/>
+        </block>
+    </view>
 </view>
+  
+
   

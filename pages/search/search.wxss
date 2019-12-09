@@ -1,0 +1,27 @@
+
+.container {
+
+}
+
+.searchBox {
+  background-color: #42BD55;
+  padding: 20rpx;
+}
+.searchBox .input-box {
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+.input-box image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 5rpx;
+}
+.input-box input {
+  flex: 1;
+  height: 100%;
+  font-size: 26rpx;
+  margin: 0 10rpx;
+}

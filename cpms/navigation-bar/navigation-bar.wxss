@@ -1,10 +1,15 @@
 
-.container {
 
+
+.container {
+    width: 100%;
+    position: fixed; /*脱离布局 */
+    top: 0;
+    z-index: 999;
 }
 
 .container .status-bar {
-    background-color: khaki;
+    
 }
 
 .container .nav-bar {
@@ -31,9 +36,13 @@
 
 }
 .left-item .home {
-    margin-left: 30rpx;
+    margin-left: 35rpx;
 }
 
 .nav-bar .nav-title {
-
+    font-size: 35.5rpx;
+    font-weight: 480;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

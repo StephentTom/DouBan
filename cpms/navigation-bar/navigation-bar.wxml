@@ -1,11 +1,30 @@
 
+<!-- 解决自定义导航栏遮住内容的 方式一: -->
+<!-- <view> -->
+    <!-- 占位视图 -->
+    <!-- <view class="placeholder" style="height: {{topMargin}}px;"></view> -->
+      
+    <!-- 由于container 设置position, 导致脱离布局, 坐标会从page的左上角开始(0, 0); 所以container 不会处在placeholder的下面.  -->
+    <!-- <view class="container">
+        <view class="status-bar" style="{{statusBarStyle}}"/>
+        <view class="nav-bar" style="{{navBarStyle}}">
+            <view class="left-item">
+                <image wx:if="{{isHiddenBack == 'false'}}" class="back icon" src="/assets/images/others/other_nav_back.png" bind:tap="_backAction"/>
+                <image wx:if="{{isHiddenHome == 'false'}}" class="home icon" src="/assets/images/others/other_nav_home.png" bind:tap="_homeAction"/>
+            </view>
+            <view class="nav-title" style="color: {{navTitleColor}};">{{navTitle}}</view>
+        </view>
+    </view>
+</view> -->
+  
 <view class="container">
     <view class="status-bar" style="{{statusBarStyle}}"/>
     <view class="nav-bar" style="{{navBarStyle}}">
         <view class="left-item">
-            <image class="back icon" src="/assets/images/others/other_nav_back.png"/>
-            <image class="home icon" src="/assets/images/others/other_nav_home.png"/>
+            <image wx:if="{{isHiddenBack == 'false'}}" class="back icon" src="{{backImageSrc}}" bind:tap="_backAction"/>
+            <image wx:if="{{isHiddenHome == 'false'}}" class="home icon" src="{{homeImageSrc}}" bind:tap="_homeAction"/>
         </view>
-        <view class="nav-title">{{}}</view>
+        <view class="nav-title" style="color: {{navTitleColor}};">{{navTitle}}</view>
     </view>
 </view>
+

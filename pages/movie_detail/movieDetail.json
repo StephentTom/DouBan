@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navigation-bar": "/cpms/navigation-bar/navigation-bar",
+    "m-tag": "/cpms/slot/m-tag"
+  }
 }

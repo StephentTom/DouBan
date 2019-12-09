@@ -1,0 +1,24 @@
+
+<view class="page-container" style="padding-top: {{topMargin}}px;">
+    <navigation-bar 
+        navTitle="搜索"
+        navTitleColor="white"
+        navBarColor="#42BD55"
+        statusBarColor="#42BD55"
+        isHiddenBack="false"
+        isHiddenHome="false"
+        backImageSrc="/assets/images/others/other_nav_white_back.png"
+        homeImageSrc="/assets/images/others/other_nav_white_home.png"
+    />
+
+    <view class="container">
+        <view class="searchBox">
+            <view class="input-box" bind:tap="searchAction">
+                <image src="/assets/images/others/other_search.png"/>
+                <input type='text' placeholder="搜索" focus confirm-type="search" bindinput="searchAction"/>
+            </view>
+        </view>
+          
+    </view>
+</view>
+  

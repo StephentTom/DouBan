@@ -1,7 +1,7 @@
 /* pages/home/home.wxss */
 
 .container {
-
+    
 }
 
 .searchBox {
@@ -22,7 +22,8 @@
 }
 .input-box text {
     color: #c6c6c6;
-    margin-left: 8rpx;
+    font-size: 26rpx;
+    margin-left: 5rpx;
 }
 
 .row-wrapper {

@@ -1,0 +1,22 @@
+
+<!-- include 引入 -->
+<!-- <view class="nav-bar">
+    <navigation-bar navTitle="首页" navTitleColor="white" navBarColor="#42BD55" statusBarColor="#42BD55"/>
+</view> -->
+
+
+
+<!-- import 引入 外界传参数进来-->
+<template name="nav-bar">
+    <!--view class="nav-bar" 样式写在了app.wxss中  -->
+    <view class="nav-bar">
+        <navigation-bar 
+            navTitle="{{navTitle}}" 
+            navTitleColor="{{navTitleColor}}" 
+            navBarColor="{{navBarColor}}" 
+            statusBarColor="{{statusBarColor}}" 
+            isHiddenBack="{{isHiddenBack}}" 
+            isHiddenHome="{{isHiddenHome}}"
+        />
+    </view>
+</template>

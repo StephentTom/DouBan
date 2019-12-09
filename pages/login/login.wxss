@@ -21,11 +21,13 @@
     border-radius: 10rpx;
 }
 .wx-login {
+    font-size: 35rpx;
     color: #fff;
     background-color: #42BD55;
     margin-top: 70rpx;
 }
 .douban-login {
+    font-size: 35rpx;
     color: #42BD55;
     border: 1rpx solid #42BD55;
     margin-top: 35rpx;
@@ -35,12 +37,11 @@
     display: flex; 
     flex-direction: row;
     color: #9d9d9d;
-    font-size: 25rpx;
+    font-size: 28rpx;
     position: absolute;
-    bottom: 100rpx;
+    bottom: 30rpx;
 }
 .agreement .protocol {
     color: #42BD55;
-    font-size: 25rpx;
     margin-left: 8rpx;
 }

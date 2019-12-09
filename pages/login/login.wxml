@@ -1,25 +1,28 @@
 
 
-<navigation-bar 
-    navTitle="登录"
-    navTitleColor="black"
-    navBarColor="#42BD55"
-    statusBarColor="#42BD55"
-    isHiddenBack="false"
-    isHiddenHome="false"
-/>
 
-<view class="container">
-    <image class="logo" src="/assets/images/others/other_launcher.png" mode="aspectFit|aspectFill|widthFix"/>
-    <view class="wx-login login-btn" bind:tap="wxLoginAction">微信登录</view>
-    <view class="douban-login login-btn" bind:tap="doubanLoginAction">已有豆瓣帐号登录</view>
+<view class="page-container" style="padding-top: {{topMargin}}px;">
+    <!-- 自定义导航栏 -->
+    <navigation-bar 
+        navTitle="登录"
+        isHiddenBack="false"
+        isHiddenHome="false"
+    />
 
-    <view class="agreement">
-        登录表示同意
-        <view class="protocol" bind:tap="procotolAction">
-            豆瓣使用协议/隐私协议
+    <view class="container">
+        <image class="logo" src="/assets/images/others/other_launcher.png" mode="aspectFit|aspectFill|widthFix"/>
+        <view class="wx-login login-btn" bind:tap="wxLoginAction">微信登录</view>
+        <view class="douban-login login-btn" bind:tap="doubanLoginAction">已有豆瓣帐号登录</view>
+
+        <view class="agreement">
+            登录表示同意
+            <view class="protocol" bind:tap="procotolAction">
+                豆瓣使用协议 / 隐私协议
+            </view>
         </view>
     </view>
-      
+
 </view>
+
+
   

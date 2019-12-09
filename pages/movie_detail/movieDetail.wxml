@@ -1,3 +1,30 @@
 
-<image src="{{movie.images.medium}}"/>
+
+<!-- 页面模板 与 组件模板(组件模板中可以提供一个 <slot> 节点, 在页面组件中使用自定义组件后 自定义组件不能添加其他标签了, 只能通过slot来添加) -->
+
+<!-- <navigation-bar navTitle="{{movie.title}}" isHiddenBack="false" isHiddenHome="false"></navigation-bar> -->
+
+
+
+<!-- 自定义组件，添加插槽，插槽的name如果设置了，使用时name要相同 -->
+<view class="container">
+    <view>
+        <image src="{{movie.images.medium}}"/>
+    </view>
+
+    <text>父类page</text>
+
+    
+    <m-tag title="22222">
+        <view class="beforeView">
+            快了
+            <text>虾米</text>
+        </view>
+          
+        <image src="{{movie.images.medium}}" class="afterImage"/>
+        <!-- <text slot="after">扯淡...</text> -->
+    </m-tag>
+</view>
+
+
   

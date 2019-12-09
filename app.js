@@ -35,7 +35,13 @@ App({
         // 设备 devtools->PC端, ios->苹果端, android->安卓端
         wx.sysInfo.platform = res.platform
         // 导航栏bar高度
-        wx.sysInfo.navBarHeight = res.platform == "ios"? 44 : 48
+        let rect = wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null; // 胶囊按钮位置信息
+        wx.getMenuButtonBoundingClientRect();
+        wx.sysInfo.navBarHeight = (function() { // 导航栏高度
+            let gap = rect.top - res.statusBarHeight; // 动态计算每台手机状态栏到胶囊按钮间距
+            return 2 * gap + rect.height;
+          })();
+        // wx.sysInfo.navBarHeight = res.platform == "ios"? 44 : 48
     } catch (e) {
       console.log('获取设备信息失败')
     }

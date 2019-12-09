@@ -1,7 +1,71 @@
 
+
+<!-- 固定自定义导航栏 方式一: 设置导航栏固定在顶部: 
+方法一: 都需要在每个需要自定义导航栏的界面包裹view, 公共的css可以放到app.wxss中  使用 position: sticky;属性 但需要在自定义导航栏界面中, 在用一个view来包裹此导航栏组件并设置position: sticky;  但在真机上向下拉时, 自定义导航栏还是不能固定.
+
+方法二: 使用 position: fixed;属性  无需在每个需要自定义导航栏的界面包裹view, 只在自定义导航栏wxss文件中设置  
+-->
+
+<!-- 可抽取成一个模板, 引入模板 include标签 是把某个模板原封不动的代码引入到需要的界面  还有一种是 <import src=""/>  -->
+<!-- <include src="/templates/nav-bar.wxml"/> -->
+
+
+<!-- 设置模板参数 -->
+<!-- <import src="/templates/nav-bar.wxml" />
+<template 
+    is="nav-bar" 
+    data="{{navTitle: '首页', navTitleColor: 'white', navBarColor: '#42BD55', statusBarColor: '#42BD55', isHiddenBack: 'true', isHiddenHome: 'true'}}"
+/> -->
+
+<!-- 解决自定义导航栏遮住内容 自定义导航栏停留效果方案:
+    方案一: 使用 position: sticky; top: 0; ==> 问题: 真机不会停留
+    方案二: position; fixed; top: 0;
+        方式一: 给页面外层包裹一层view, 设置此view的padding-top的动态值(状态栏高度+导航栏高度)
+        方式二: 在自定义导航栏中添加一个占位view, 设置view的padding-top的动态值(状态栏高度+导航栏高度)
+-->
+
+
+<!-- 解决自定义导航栏遮住内容的 方式二: -->
+<!-- <view class="page-wrapper" style="padding-top:{{topMargin}}px">
+   <navigation-bar 
+        navTitle="首页" 
+        navTitleColor="white" 
+        navBarColor="#42BD55" 
+        statusBarColor="#42BD55"
+    />
+
+    <view class="container">
+        <view class="searchBox">
+            <view class="input-box" bind:tap="searchAction">
+                <image src="/assets/images/others/other_search.png"/>
+                <text>搜索</text>
+            </view>
+        </view>
+
+        <view class="main-wrraper">
+            <view class="row-wrapper" wx:for="{{allMovies}}" wx:key="unique">
+                <view class="section-wrapper">
+                    <view class="title">{{item.title}}</view>
+                    <view class="more" bind:tap="moreAction" data-sectionModel="{{item}}">
+                        查看更多
+                        <view class="arrow"/>
+                    </view>
+                </view>
+
+                <scroll-view class="scroll-wrapper" scroll-x>
+                    <block wx:for="{{item.movies}}" wx:for-item="movie" wx:key="unique">
+                        <movieItem movie="{{movie}}" bind:tapItem="movieAction" data-movie="{{movie}}"/>
+                    </block>
+                </scroll-view>
+            </view>
+        </view>
+    </view> 
+</view> -->
+
+
 <view class="container">
     <view class="searchBox">
-        <view class="input-box">
+        <view class="input-box" bind:tap="searchAction">
             <image src="/assets/images/others/other_search.png"/>
             <text>搜索</text>
         </view>
@@ -24,10 +88,10 @@
             </scroll-view>
         </view>
     </view>
-</view>
+</view> 
   
 
-
+  
 <!-- <view class="item">
     <image src="{{movie.images.large}}"/>
     <view class="name">{{movie.title}}</view>
@@ -51,3 +115,15 @@
         <block wx:else>暂无评论</block>
     </view> -->
 <!-- </view> --> 
+
+
+<!-- 
+    {
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#42BD55",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "movieItem": "/cpms/movieItem/movieItem"
+  }
+}
+ -->

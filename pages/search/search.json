@@ -1,7 +1,7 @@
 {
+  "navigationBarTextStyle": "white",
   "navigationStyle": "custom",
   "usingComponents": {
-    "movieItem": "/cpms/movieItem/movieItem",
     "navigation-bar": "/cpms/navigation-bar/navigation-bar"
   }
 }

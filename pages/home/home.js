@@ -12,6 +12,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 自定义导航栏, 解决内容被导航栏遮住
+    // topMargin: wx.sysInfo.navBarHeight + wx.sysInfo.statusBarHeight,
+
     // 所有电影
     allMovies: [
       {
@@ -49,13 +52,13 @@ Page({
     // 从缓存中获取数据
     this.getLocalData()
     // 服务器数据
-    // this.getCity((city)=>{
-    //   this.getMovies(0, {city: city})
-    // })
-    // this.getMovies(1)
-    // this.getMovies(2)
-    // this.getMovies(3)
-    // this.getMovies(4) 
+    this.getCity((city)=>{
+      this.getMovies(0, {city: city})
+    })
+    this.getMovies(1)
+    this.getMovies(2)
+    this.getMovies(3)
+    this.getMovies(4) 
   },
 
   /**
@@ -153,7 +156,14 @@ Page({
           success: (result) => {
             if (result.confirm) {
               // 进入设置界面
-
+              wx.openSetting({
+                success: (result) => {
+                  console.log(result)
+                },
+                fail: () => {},
+                complete: () => {}
+              });
+                
             }
           },
         }); 
@@ -221,6 +231,15 @@ Page({
     let jsonString = JSON.stringify(event.currentTarget.dataset.movie)
     wx.navigateTo({
       url: `/pages/movie_detail/movieDetail?movie=${jsonString}`
+    });
+  },
+  
+  /**
+   * 点击搜索事件
+   */
+  searchAction: function() {
+    wx.navigateTo({
+      url: '/pages/search/search'
     });
   }
 })

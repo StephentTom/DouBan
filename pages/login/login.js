@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    // 自定义导航栏, 解决内容被导航栏遮住
+    topMargin: wx.sysInfo.navBarHeight + wx.sysInfo.statusBarHeight,
   },
 
   /**

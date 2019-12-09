@@ -1,1 +1,15 @@
 /* pages/movie_detail/movieDetail.wxss */
+
+.container {
+    padding: 30rpx;
+    background-color: pink;
+}
+
+.beforeView {
+    background-color: indigo;
+}
+
+.afterImage {
+    width: 160rpx;
+    height: 233rpx;
+}

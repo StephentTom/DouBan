@@ -6,7 +6,8 @@
     "pages/agreement/agreement",
     "pages/login/login",
     "pages/home_movie_list/movieList",
-    "pages/movie_detail/movieDetail"
+    "pages/movie_detail/movieDetail",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
